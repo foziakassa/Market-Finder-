@@ -45,28 +45,28 @@ const markets = [
     id: 4,
     name: "Etho cultural Drinking",
     description: 'Ethiopian cultural drinks like "Tela", "Areki"',
-    image: "/placeholder.svg?height=200&width=300",
+    image: drink,
     category: "Food",
   },
   {
     id: 5,
     name: "Home decors",
     description: "hand made home decor materials with affordable price",
-    image: "/placeholder.svg?height=200&width=300",
+    image: decor,
     category: "Decor",
   },
   {
     id: 6,
     name: "Ethio Hand mades",
     description: 'hand made "mosabs" and "yeggdda gete"',
-    image: "/images/handmade-market.png",
+    image: moseb,
     category: "Crafts",
   },
 ]
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 px-4 py-3">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -96,8 +96,8 @@ export default function HomePage() {
         {/* Search Section */}
         <div className="mb-6">
           <div className="relative mb-4">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <Input placeholder="Search for Local Markets" className="pl-10 py-3 text-lg border-gray-300 rounded-lg" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-orange-500 w-5 h-5" />
+            <Input placeholder="Search for Local Markets" className="pl-10 py-3 text-lg border-orange-300 rounded-lg" />
           </div>
 
           {/* Category Filters */}
@@ -149,7 +149,7 @@ export default function HomePage() {
         </div>
 
         {/* Markets Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
           {markets.map((market) => (
             <div key={market.id} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
               <div className="aspect-video relative">
